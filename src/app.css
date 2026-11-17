@@ -20,3 +20,23 @@
     touch-action: manipulation;
   }
 }
+
+/* L'aperçu des cartes empilées, en boucle de 4,8 s : chaque carte arrive puis fait rétrécir celles du dessous. */
+@keyframes stack-0 {
+  0% { translate: 0 140%; scale: 1; opacity: 0; }
+  12%, 22% { translate: 0 0; scale: 1; opacity: 1; }
+  34%, 44% { translate: 0 0; scale: 0.96; opacity: 1; }
+  56%, 85% { translate: 0 0; scale: 0.92; opacity: 1; }
+  95%, 100% { translate: 0 0; scale: 0.92; opacity: 0; }
+}
+@keyframes stack-1 {
+  0%, 22% { translate: 0 140%; scale: 1; opacity: 0; }
+  34%, 44% { translate: 0 10px; scale: 1; opacity: 1; }
+  56%, 85% { translate: 0 10px; scale: 0.96; opacity: 1; }
+  95%, 100% { translate: 0 10px; scale: 0.96; opacity: 0; }
+}
+@keyframes stack-2 {
+  0%, 44% { translate: 0 140%; scale: 1; opacity: 0; }
+  56%, 85% { translate: 0 20px; scale: 1; opacity: 1; }
+  95%, 100% { translate: 0 20px; scale: 1; opacity: 0; }
+}
