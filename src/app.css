@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+@source '../registry';
+
+@theme {
+  --color-accent: #1735f9;
+  --color-ink: #0b0b0d;
+  --color-muted: #f1f2f4;
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+@layer base {
+  html {
+    color: var(--color-ink);
+    background: white;
+    -webkit-tap-highlight-color: transparent;
+  }
+  a,
+  button {
+    touch-action: manipulation;
+  }
+}

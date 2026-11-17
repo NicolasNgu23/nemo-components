@@ -1,0 +1,4 @@
+{
+  "rewrites": [{ "source": "/((?!r/|assets/).*)", "destination": "/index.html" }],
+  "headers": [{ "source": "/r/(.*)", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] }]
+}

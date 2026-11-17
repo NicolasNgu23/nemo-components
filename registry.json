@@ -1,0 +1,47 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "nemo-components",
+  "homepage": "https://nemo-components.vercel.app",
+  "items": [
+    {
+      "name": "use-in-view",
+      "type": "registry:hook",
+      "title": "useInView",
+      "description": "Sait si un élément est à l'écran, une fois ou à chaque passage.",
+      "files": [{ "path": "registry/hooks/use-in-view.ts", "type": "registry:hook", "target": "@hooks/use-in-view.ts" }]
+    },
+    {
+      "name": "stacked-cards",
+      "type": "registry:component",
+      "title": "Cartes empilées",
+      "description": "Des étapes en cartes qui se posent les unes sur les autres au défilement.",
+      "files": [
+        { "path": "registry/components/stacked-cards.tsx", "type": "registry:component", "target": "@components/stacked-cards.tsx" },
+        { "path": "registry/lib/stack-scale.ts", "type": "registry:lib", "target": "@lib/stack-scale.ts" }
+      ]
+    },
+    {
+      "name": "reveal-words",
+      "type": "registry:component",
+      "title": "Mots qui montent",
+      "description": "Un titre dont chaque mot monte de sous sa ligne, l'un après l'autre.",
+      "registryDependencies": ["https://nemo-components.vercel.app/r/use-in-view.json"],
+      "files": [
+        { "path": "registry/components/reveal-words.tsx", "type": "registry:component", "target": "@components/reveal-words.tsx" },
+        { "path": "registry/lib/reveal-delay.ts", "type": "registry:lib", "target": "@lib/reveal-delay.ts" }
+      ]
+    },
+    {
+      "name": "rising-wordmark",
+      "type": "registry:component",
+      "title": "Nom qui se lève",
+      "description": "Un mot sur toute la largeur, lettres qui montent au hasard et rebondissent au survol.",
+      "registryDependencies": ["https://nemo-components.vercel.app/r/use-in-view.json"],
+      "files": [
+        { "path": "registry/components/rising-wordmark.tsx", "type": "registry:component", "target": "@components/rising-wordmark.tsx" },
+        { "path": "registry/lib/elastic.ts", "type": "registry:lib", "target": "@lib/elastic.ts" },
+        { "path": "registry/lib/shuffled-order.ts", "type": "registry:lib", "target": "@lib/shuffled-order.ts" }
+      ]
+    }
+  ]
+}
