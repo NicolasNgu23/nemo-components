@@ -3,6 +3,7 @@ import type { ComponentType } from 'react'
 import { RevealWords } from '@/components/reveal-words'
 import { RisingWordmark } from '@/components/rising-wordmark'
 import { ScrollAccordion } from '@/components/scroll-accordion'
+import { LogoGrid } from '@/components/logo-grid'
 import { ServiceList } from '@/components/service-list'
 
 const miniCards = ['01', '02', '03']
@@ -101,10 +102,33 @@ function ScrollAccordionPreview() {
   )
 }
 
+function LogoGridPreview() {
+  return (
+    <div className="h-full overflow-hidden px-6 pt-6">
+      <div className="w-[250%] origin-top-left [zoom:0.4]">
+        <LogoGrid
+          title="Ils nous font confiance"
+          logos={[
+            'Café Brume',
+            'Onde',
+            'Atelier Verre',
+            'Nord & Fils',
+            'Maison Lumen',
+            'Pivot',
+            'Rivage',
+            'Opale',
+          ].map((name) => ({ name }))}
+        />
+      </div>
+    </div>
+  )
+}
+
 export const previews: Record<string, ComponentType> = {
   'stacked-cards': StackedCardsPreview,
   'reveal-words': RevealWordsPreview,
   'rising-wordmark': RisingWordmarkPreview,
   'service-list': ServiceListPreview,
   'scroll-accordion': ScrollAccordionPreview,
+  'logo-grid': LogoGridPreview,
 }

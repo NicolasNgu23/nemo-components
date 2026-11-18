@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react'
 
+import { LogoGrid } from '@/components/logo-grid'
 import { RevealWords } from '@/components/reveal-words'
 import { RisingWordmark } from '@/components/rising-wordmark'
 import { ScrollAccordion } from '@/components/scroll-accordion'
@@ -142,10 +143,38 @@ function ScrollAccordionDemo() {
   )
 }
 
+const demoLogos = [
+  'Café Brume',
+  'Onde',
+  'Atelier Verre',
+  'Nord & Fils',
+  'Maison Lumen',
+  'Studio Hêtre',
+  'Pivot',
+  'Les Halles 9',
+  'Rivage',
+  'Ferme Ardent',
+  'Opale',
+  'Bureau Sable',
+].map((name) => ({ name }))
+
+function LogoGridDemo() {
+  return (
+    <div className="pt-[60vh] pb-[40vh]">
+      <LogoGrid
+        title="Ils nous font confiance"
+        logos={demoLogos}
+        className="mx-auto max-w-[1008px] px-6"
+      />
+    </div>
+  )
+}
+
 export const demos: Record<string, ComponentType> = {
   'stacked-cards': StackedCardsDemo,
   'reveal-words': RevealWordsDemo,
   'rising-wordmark': RisingWordmarkDemo,
   'service-list': ServiceListDemo,
   'scroll-accordion': ScrollAccordionDemo,
+  'logo-grid': LogoGridDemo,
 }

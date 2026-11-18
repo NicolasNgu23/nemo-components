@@ -95,4 +95,18 @@ export const items: CatalogueItem[] = [
       'La première carte est toujours ouverte. Tout est ouvert si l’appareil désactive les animations.',
     ],
   },
+  {
+    name: 'logo-grid',
+    title: 'Grille de logos',
+    description:
+      'Une section « ils nous font confiance » en grille. Le titre monte mot à mot, puis chaque ligne de logos apparaît en fondu en entrant à l’écran, de gauche à droite.',
+    tags: ['Apparition', 'Logos', 'Grille'],
+    origin: { label: 'cuberto.com, section des marques clientes', url: 'https://cuberto.com/' },
+    values: [
+      'Mots du titre qui montent de 120 % à 0 en 1,5 s, courbe expo.out, 150 ms d’écart entre deux mots.',
+      'Logos en fondu de 0 à 1 en 1,9 s, courbe power1.out, dès que leur ligne entre à l’écran.',
+      'Dans une ligne, 100 ms d’écart d’une colonne à la suivante.',
+      'Grille de 4 colonnes, 2 sur téléphone. Tout est visible si l’appareil désactive les animations.',
+    ],
+  },
 ]

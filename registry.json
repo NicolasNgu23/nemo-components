@@ -127,6 +127,27 @@
           "target": "@lib/accordion-progress.ts"
         }
       ]
+    },
+    {
+      "name": "logo-grid",
+      "type": "registry:component",
+      "title": "Grille de logos",
+      "description": "Un titre qui monte mot à mot puis une grille de logos qui apparaît ligne par ligne, de gauche à droite.",
+      "registryDependencies": [
+        "https://nemo-components.vercel.app/r/use-in-view.json"
+      ],
+      "files": [
+        {
+          "path": "registry/components/logo-grid.tsx",
+          "type": "registry:component",
+          "target": "@components/logo-grid.tsx"
+        },
+        {
+          "path": "registry/lib/column-delay.ts",
+          "type": "registry:lib",
+          "target": "@lib/column-delay.ts"
+        }
+      ]
     }
   ]
 }
