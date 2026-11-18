@@ -78,6 +78,7 @@ export const items: CatalogueItem[] = [
       'À la sortie, le centre passe au point de sortie et le disque s’y rétracte avec la même courbe.',
       'Titre décalé de 16 px et flèche tournée de 45° en 600 ms, même courbe. Texte et étiquettes plus lisibles en 400 ms.',
       'Apparition liée au défilement, 40 px et opacité, de l’entrée de la ligne à 60 % de cette entrée, linéaire (CSS ViewTimeline).',
+      'Réglages : fillDuration pour la vitesse du disque, reveal="accordion" pour déplier chaque ligne au défilement comme l’accordéon de Cuberto.',
     ],
   },
   {

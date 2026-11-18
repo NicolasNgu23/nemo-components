@@ -99,6 +99,11 @@
           "path": "registry/lib/fill-origin.ts",
           "type": "registry:lib",
           "target": "@lib/fill-origin.ts"
+        },
+        {
+          "path": "registry/lib/accordion-progress.ts",
+          "type": "registry:lib",
+          "target": "@lib/accordion-progress.ts"
         }
       ]
     },
