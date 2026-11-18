@@ -6,6 +6,7 @@ import { RisingWordmark } from '@/components/rising-wordmark'
 import { ScrollAccordion } from '@/components/scroll-accordion'
 import { ServiceList } from '@/components/service-list'
 import { StackedCards } from '@/components/stacked-cards'
+import { TestimonialPile } from '@/components/testimonial-pile'
 
 function StackedCardsDemo() {
   return (
@@ -170,6 +171,45 @@ function LogoGridDemo() {
   )
 }
 
+const demoTestimonials = [
+  {
+    quote:
+      'Pendant trois mois, l’équipe n’a travaillé que sur notre site. On avait l’impression d’avoir un développeur à nous.',
+    author: 'Claire Martin, Maison Lumen',
+  },
+  {
+    quote:
+      'La réservation en ligne a remplacé la moitié de nos appels. Le site est rapide et nos clients le trouvent tout de suite.',
+    author: 'Karim Benali, Café Brume',
+  },
+  {
+    quote:
+      'Ils ont compris notre métier avant de proposer quoi que ce soit. L’outil d’IA nous fait gagner une heure par jour.',
+    author: 'Sophie Laurent, Onde',
+  },
+  {
+    quote:
+      'Des échanges simples, des délais tenus et un résultat au-delà de ce qu’on imaginait au premier rendez-vous.',
+    author: 'Julien Morel, Atelier Verre',
+  },
+  {
+    quote:
+      'Le nouveau site nous ressemble enfin. Les demandes de devis arrivent maintenant chaque semaine.',
+    author: 'Inès Garnier, Nord & Fils',
+  },
+].map((item) => ({
+  quote: item.quote,
+  author: <span className="text-sm font-semibold">{item.author}</span>,
+}))
+
+function TestimonialPileDemo() {
+  return (
+    <div className="px-6 pt-[40vh] pb-[30vh]">
+      <TestimonialPile title="Ils nous font confiance" items={demoTestimonials} />
+    </div>
+  )
+}
+
 export const demos: Record<string, ComponentType> = {
   'stacked-cards': StackedCardsDemo,
   'reveal-words': RevealWordsDemo,
@@ -177,4 +217,5 @@ export const demos: Record<string, ComponentType> = {
   'service-list': ServiceListDemo,
   'scroll-accordion': ScrollAccordionDemo,
   'logo-grid': LogoGridDemo,
+  'testimonial-pile': TestimonialPileDemo,
 }

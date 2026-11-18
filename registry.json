@@ -148,6 +148,30 @@
           "target": "@lib/column-delay.ts"
         }
       ]
+    },
+    {
+      "name": "testimonial-pile",
+      "type": "registry:component",
+      "title": "Tas de témoignages",
+      "description": "Des cartes de témoignages posées en tas penché, qui se rangent en grille au survol.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://nemo-components.vercel.app/r/use-in-view.json"
+      ],
+      "files": [
+        {
+          "path": "registry/components/testimonial-pile.tsx",
+          "type": "registry:component",
+          "target": "@components/testimonial-pile.tsx"
+        },
+        {
+          "path": "registry/lib/pile-offset.ts",
+          "type": "registry:lib",
+          "target": "@lib/pile-offset.ts"
+        }
+      ]
     }
   ]
 }

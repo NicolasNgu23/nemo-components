@@ -5,6 +5,7 @@ import { RisingWordmark } from '@/components/rising-wordmark'
 import { ScrollAccordion } from '@/components/scroll-accordion'
 import { LogoGrid } from '@/components/logo-grid'
 import { ServiceList } from '@/components/service-list'
+import { TestimonialPile } from '@/components/testimonial-pile'
 
 const miniCards = ['01', '02', '03']
 
@@ -124,6 +125,26 @@ function LogoGridPreview() {
   )
 }
 
+// Le vrai composant, réduit : survoler la carte du catalogue range le tas.
+function TestimonialPilePreview() {
+  return (
+    <div className="h-full overflow-hidden px-4 pt-6">
+      <div className="w-[300%] origin-top-left [zoom:0.33]">
+        <TestimonialPile
+          title="Ils nous font confiance"
+          items={[
+            'Un site qui nous ressemble enfin.',
+            'Une heure gagnée chaque jour.',
+            'Des délais tenus.',
+            'Les devis arrivent chaque semaine.',
+            'Un vrai partenaire.',
+          ].map((quote) => ({ quote, author: <span className="font-semibold">Exemple</span> }))}
+        />
+      </div>
+    </div>
+  )
+}
+
 export const previews: Record<string, ComponentType> = {
   'stacked-cards': StackedCardsPreview,
   'reveal-words': RevealWordsPreview,
@@ -131,4 +152,5 @@ export const previews: Record<string, ComponentType> = {
   'service-list': ServiceListPreview,
   'scroll-accordion': ScrollAccordionPreview,
   'logo-grid': LogoGridPreview,
+  'testimonial-pile': TestimonialPilePreview,
 }

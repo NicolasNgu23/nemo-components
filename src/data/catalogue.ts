@@ -109,4 +109,21 @@ export const items: CatalogueItem[] = [
       'Grille de 4 colonnes, 2 sur téléphone. Tout est visible si l’appareil désactive les animations.',
     ],
   },
+  {
+    name: 'testimonial-pile',
+    title: 'Tas de témoignages',
+    description:
+      'Des témoignages en cartes posées en tas, penchées et qui se chevauchent. Au survol, toutes les cartes se redressent et se rangent en grille pour se lire.',
+    tags: ['Survol', 'Cartes', 'Témoignages'],
+    origin: {
+      label: 'cuberto.com, section « Trusted by our clients »',
+      url: 'https://cuberto.com/',
+    },
+    values: [
+      'Au repos, chaque carte est décalée vers le centre et penchée de 0 à 20 degrés, la carte du milieu reste droite et passe dessous.',
+      'Au survol du tas, toutes les cartes reviennent en grille en 1 s, courbe cubic-bezier(0.25, 1, 0.5, 1), et repartent pareil.',
+      'Titre qui monte mot à mot, 150 ms d’écart, expo.out en 1,5 s.',
+      'Grille rangée d’office sur écran tactile et si l’appareil désactive les animations.',
+    ],
+  },
 ]
