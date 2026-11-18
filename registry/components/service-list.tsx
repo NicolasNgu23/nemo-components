@@ -4,10 +4,10 @@ import type { PointerEvent } from 'react'
 
 import { fillOrigin } from '@/lib/fill-origin'
 
-export type ServiceItem = { title: string; text: string; tags?: string[]; href?: string }
+export type ServiceItem = { title: string; text: string; tags?: readonly string[]; href?: string }
 
 type ServiceListProps = {
-  items: ServiceItem[]
+  items: readonly ServiceItem[]
   fillColor?: string
   className?: string
 }
