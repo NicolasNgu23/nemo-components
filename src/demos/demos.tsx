@@ -2,6 +2,7 @@ import type { ComponentType } from 'react'
 
 import { RevealWords } from '@/components/reveal-words'
 import { RisingWordmark } from '@/components/rising-wordmark'
+import { ScrollAccordion } from '@/components/scroll-accordion'
 import { ServiceList } from '@/components/service-list'
 import { StackedCards } from '@/components/stacked-cards'
 
@@ -88,9 +89,63 @@ function ServiceListDemo() {
   )
 }
 
+function Rings({ hue }: { hue: number }) {
+  return (
+    <div
+      className="absolute inset-0"
+      style={{
+        background: `radial-gradient(circle at 60% 120%, hsl(${hue} 90% 60% / 0.55) 0 18%, hsl(${hue} 90% 60% / 0.32) 18% 30%, hsl(${hue} 90% 60% / 0.18) 30% 44%, hsl(${hue} 90% 60% / 0.08) 44% 60%, transparent 60%)`,
+      }}
+    />
+  )
+}
+
+function ScrollAccordionDemo() {
+  return (
+    <div className="mx-auto max-w-[1000px] py-16">
+      <ScrollAccordion
+        activeColor="#1735f9"
+        items={[
+          {
+            title: 'Création de site',
+            text: 'Un site sur mesure, de la maquette à la mise en ligne, pensé pour le téléphone et pour Google.',
+            href: '#',
+            visual: <Rings hue={200} />,
+          },
+          {
+            title: 'Refonte de site',
+            text: 'Votre site actuel, plus rapide, plus clair et plus moderne, sans perdre ce qui marche déjà.',
+            href: '#',
+            visual: <Rings hue={250} />,
+          },
+          {
+            title: 'Agents vocaux IA',
+            text: 'Un agent qui décroche, répond, qualifie les demandes et prend les rendez-vous, jour et nuit.',
+            href: '#',
+            visual: <Rings hue={180} />,
+          },
+          {
+            title: 'Automatisation des tâches',
+            text: 'Vos outils reliés entre eux, agenda, emails, CRM ou caisse, pour en finir avec les saisies en double.',
+            href: '#',
+            visual: <Rings hue={220} />,
+          },
+          {
+            title: 'Hébergement et maintenance',
+            text: 'Hébergement, mises à jour, sauvegardes et petites modifications, longtemps après la mise en ligne.',
+            href: '#',
+            visual: <Rings hue={260} />,
+          },
+        ]}
+      />
+    </div>
+  )
+}
+
 export const demos: Record<string, ComponentType> = {
   'stacked-cards': StackedCardsDemo,
   'reveal-words': RevealWordsDemo,
   'rising-wordmark': RisingWordmarkDemo,
   'service-list': ServiceListDemo,
+  'scroll-accordion': ScrollAccordionDemo,
 }

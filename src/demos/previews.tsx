@@ -2,6 +2,7 @@ import type { ComponentType } from 'react'
 
 import { RevealWords } from '@/components/reveal-words'
 import { RisingWordmark } from '@/components/rising-wordmark'
+import { ScrollAccordion } from '@/components/scroll-accordion'
 import { ServiceList } from '@/components/service-list'
 
 const miniCards = ['01', '02', '03']
@@ -81,9 +82,29 @@ function ServiceListPreview() {
   )
 }
 
+// Le vrai composant, réduit : ses cartes s'ouvrent selon leur position dans l'écran, donc aussi quand la carte
+// du catalogue remonte pendant le défilement.
+function ScrollAccordionPreview() {
+  return (
+    <div className="h-full overflow-hidden px-4 pt-4">
+      <div className="w-[300%] origin-top-left [zoom:0.33]">
+        <ScrollAccordion
+          activeColor="#1735f9"
+          items={[
+            { title: 'Création de site', text: 'Un site sur mesure, pensé pour le téléphone.' },
+            { title: 'Agents vocaux IA', text: 'Un agent qui décroche et prend les rendez-vous.' },
+            { title: 'Automatisation', text: 'Vos outils reliés entre eux.' },
+          ]}
+        />
+      </div>
+    </div>
+  )
+}
+
 export const previews: Record<string, ComponentType> = {
   'stacked-cards': StackedCardsPreview,
   'reveal-words': RevealWordsPreview,
   'rising-wordmark': RisingWordmarkPreview,
   'service-list': ServiceListPreview,
+  'scroll-accordion': ScrollAccordionPreview,
 }

@@ -101,6 +101,27 @@
           "target": "@lib/fill-origin.ts"
         }
       ]
+    },
+    {
+      "name": "scroll-accordion",
+      "type": "registry:component",
+      "title": "Accordéon au défilement",
+      "description": "Des cartes de services qui s'ouvrent une à une au défilement, du clair au foncé.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/components/scroll-accordion.tsx",
+          "type": "registry:component",
+          "target": "@components/scroll-accordion.tsx"
+        },
+        {
+          "path": "registry/lib/accordion-progress.ts",
+          "type": "registry:lib",
+          "target": "@lib/accordion-progress.ts"
+        }
+      ]
     }
   ]
 }

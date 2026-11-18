@@ -80,4 +80,18 @@ export const items: CatalogueItem[] = [
       'Apparition liée au défilement, 40 px et opacité, de l’entrée de la ligne à 60 % de cette entrée, linéaire (CSS ViewTimeline).',
     ],
   },
+  {
+    name: 'scroll-accordion',
+    title: 'Accordéon au défilement',
+    description:
+      'Des services en cartes qui s’ouvrent une à une au défilement. Chaque carte grandit, passe du clair au foncé et dévoile son texte au rythme de sa remontée dans l’écran.',
+    tags: ['Défilement', 'Cartes', 'Accordéon'],
+    origin: { label: 'cuberto.com, section des services', url: 'https://cuberto.com/' },
+    values: [
+      'Ouverture en ligne droite avec le défilement, du haut de la carte à 70 % de l’écran jusqu’à 42 %.',
+      'Fond, couleur du texte et numéro (opacité 0,2 à 0,5) en power1.out sur la même plage.',
+      'Décor qui apparaît en ligne droite, texte et bouton invisibles jusqu’à 40 % puis en power1.out.',
+      'La première carte est toujours ouverte. Tout est ouvert si l’appareil désactive les animations.',
+    ],
+  },
 ]
