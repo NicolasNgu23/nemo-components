@@ -23,7 +23,7 @@ export default function ComponentPage() {
           {catalogue.backLabel}
         </Link>
         <div className="mt-10 grid gap-10 md:grid-cols-[1fr_420px]">
-          <div>
+          <div className="min-w-0">
             <h1 className="text-[clamp(2.25rem,5vw,4rem)] leading-[0.95] font-medium tracking-[-0.05em]">
               {item.title}
             </h1>
@@ -36,7 +36,7 @@ export default function ComponentPage() {
               </a>
             </p>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex min-w-0 flex-col gap-6">
             <InstallCommand name={item.name} />
             <div>
               <h2 className="text-sm font-medium">{catalogue.measuredValues}</h2>

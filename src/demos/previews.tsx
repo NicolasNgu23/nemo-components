@@ -2,6 +2,7 @@ import type { ComponentType } from 'react'
 
 import { RevealWords } from '@/components/reveal-words'
 import { RisingWordmark } from '@/components/rising-wordmark'
+import { ServiceList } from '@/components/service-list'
 
 const miniCards = ['01', '02', '03']
 
@@ -52,8 +53,37 @@ function RisingWordmarkPreview() {
   )
 }
 
+function ServiceListPreview() {
+  return (
+    <div className="grid h-full items-center px-4">
+      <div className="w-[250%] origin-left [zoom:0.4]">
+        <ServiceList
+          items={[
+            {
+              title: 'Création de site',
+              text: 'Un site sur mesure, pensé pour le téléphone.',
+              tags: ['Maquette', 'Design'],
+            },
+            {
+              title: 'Agents vocaux IA',
+              text: 'Un agent qui décroche et prend les rendez-vous.',
+              tags: ['Appels', '24 h/24'],
+            },
+            {
+              title: 'Automatisation',
+              text: 'Vos outils reliés entre eux.',
+              tags: ['CRM', 'Agenda'],
+            },
+          ]}
+        />
+      </div>
+    </div>
+  )
+}
+
 export const previews: Record<string, ComponentType> = {
   'stacked-cards': StackedCardsPreview,
   'reveal-words': RevealWordsPreview,
   'rising-wordmark': RisingWordmarkPreview,
+  'service-list': ServiceListPreview,
 }

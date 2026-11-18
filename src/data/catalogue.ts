@@ -11,7 +11,8 @@ export const catalogue = {
   measuredValues: 'Valeurs mesurées',
   backLabel: 'Tous les composants',
   notFound: 'Ce composant n’existe pas (encore).',
-  footer: 'Une boutique de Nemo Studio. Les effets sont refaits, aucun code des sites d’origine n’est copié.',
+  footer:
+    'Une boutique de Nemo Studio. Les effets sont refaits, aucun code des sites d’origine n’est copié.',
 }
 
 export type CatalogueItem = {
@@ -63,6 +64,20 @@ export const items: CatalogueItem[] = [
       'Point de 0 à 1 en 600 ms avec dépassement (back.out), à 1 200 ms.',
       'Survol, échelle 0,05 puis retour en elastic.out(1, 0.8) sur 2 400 ms.',
       'Rejoué à chaque passage, nouvel ordre à chaque fois.',
+    ],
+  },
+  {
+    name: 'service-list',
+    title: 'Liste de services',
+    description:
+      'Une liste numérotée de services. Chaque ligne monte en apparaissant au défilement, et au survol un disque de couleur grandit depuis le point d’entrée du pointeur puis se rétracte vers son point de sortie.',
+    tags: ['Survol', 'Défilement', 'Liste'],
+    origin: { label: 'mowa.studio, liste « Leistungen »', url: 'https://mowa.studio/leistungen' },
+    values: [
+      'Disque centré sur le point d’entrée, rayon jusqu’au coin le plus éloigné, de 0 à 1 en 750 ms, cubic-bezier(0.22, 1, 0.36, 1).',
+      'À la sortie, le centre passe au point de sortie et le disque s’y rétracte avec la même courbe.',
+      'Titre décalé de 16 px et flèche tournée de 45° en 600 ms, même courbe. Texte et étiquettes plus lisibles en 400 ms.',
+      'Apparition liée au défilement, 40 px et opacité, de l’entrée de la ligne à 60 % de cette entrée, linéaire (CSS ViewTimeline).',
     ],
   },
 ]

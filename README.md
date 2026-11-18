@@ -17,5 +17,6 @@ pnpm dlx shadcn@latest add https://nemo-components.vercel.app/r/stacked-cards.js
 | `stacked-cards` | Étapes en cartes qui s'empilent au défilement | mowa.studio |
 | `reveal-words` | Mots qui montent l'un après l'autre | cuberto.com |
 | `rising-wordmark` | Lettres qui montent au hasard et rebondissent au survol | noth.in |
+| `service-list` | Liste de services, disque de couleur qui suit le pointeur au survol | mowa.studio |
 
 Les effets sont refaits, aucun code des sites d'origine n'est copié. Le skill Reanimate inclus dans `.claude/skills/` est sous licence MIT (Niaz Morshed).
