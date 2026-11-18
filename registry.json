@@ -172,6 +172,27 @@
           "target": "@lib/pile-offset.ts"
         }
       ]
+    },
+    {
+      "name": "project-list",
+      "type": "registry:component",
+      "title": "Liste de projets",
+      "description": "Une liste de projets dont les traits s'ouvrent depuis le centre ; au survol, les autres lignes s'effacent et le visuel du projet apparaît derrière.",
+      "registryDependencies": [
+        "https://nemo-components.vercel.app/r/use-in-view.json"
+      ],
+      "files": [
+        {
+          "path": "registry/components/project-list.tsx",
+          "type": "registry:component",
+          "target": "@components/project-list.tsx"
+        },
+        {
+          "path": "registry/lib/list-fade.ts",
+          "type": "registry:lib",
+          "target": "@lib/list-fade.ts"
+        }
+      ]
     }
   ]
 }

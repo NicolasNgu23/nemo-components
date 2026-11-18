@@ -4,6 +4,7 @@ import { RevealWords } from '@/components/reveal-words'
 import { RisingWordmark } from '@/components/rising-wordmark'
 import { ScrollAccordion } from '@/components/scroll-accordion'
 import { LogoGrid } from '@/components/logo-grid'
+import { ProjectList } from '@/components/project-list'
 import { ServiceList } from '@/components/service-list'
 import { TestimonialPile } from '@/components/testimonial-pile'
 
@@ -145,6 +146,23 @@ function TestimonialPilePreview() {
   )
 }
 
+function ProjectListPreview() {
+  return (
+    <div className="h-full overflow-hidden bg-[#0b0b0d] px-5 pt-6 text-white">
+      <div className="w-[200%] origin-top-left [zoom:0.5]">
+        <ProjectList
+          items={[
+            { title: 'Olive Chicken', client: 'Restaurant', year: '2026' },
+            { title: 'Nemo Job', client: 'Application', year: '2026' },
+            { title: 'Café Brume', client: 'Site vitrine', year: '2025' },
+            { title: 'Atelier Verre', client: 'Boutique', year: '2025' },
+          ]}
+        />
+      </div>
+    </div>
+  )
+}
+
 export const previews: Record<string, ComponentType> = {
   'stacked-cards': StackedCardsPreview,
   'reveal-words': RevealWordsPreview,
@@ -153,4 +171,5 @@ export const previews: Record<string, ComponentType> = {
   'scroll-accordion': ScrollAccordionPreview,
   'logo-grid': LogoGridPreview,
   'testimonial-pile': TestimonialPilePreview,
+  'project-list': ProjectListPreview,
 }

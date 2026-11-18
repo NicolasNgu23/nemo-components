@@ -1,6 +1,7 @@
 import type { ComponentType } from 'react'
 
 import { LogoGrid } from '@/components/logo-grid'
+import { ProjectList } from '@/components/project-list'
 import { RevealWords } from '@/components/reveal-words'
 import { RisingWordmark } from '@/components/rising-wordmark'
 import { ScrollAccordion } from '@/components/scroll-accordion'
@@ -210,6 +211,37 @@ function TestimonialPileDemo() {
   )
 }
 
+const demoProjects = [
+  { title: 'Olive Chicken', client: 'Restaurant', year: '2026', hue: 140 },
+  { title: 'Nemo Job', client: 'Application', year: '2026', hue: 230 },
+  { title: 'Café Brume', client: 'Site vitrine', year: '2025', hue: 30 },
+  { title: 'Atelier Verre', client: 'Boutique en ligne', year: '2025', hue: 190 },
+  { title: 'Nord & Fils', client: 'Refonte', year: '2025', hue: 0 },
+  { title: 'Onde', client: 'Agent vocal IA', year: '2024', hue: 270 },
+].map((item) => ({
+  title: item.title,
+  client: item.client,
+  year: item.year,
+  href: '#',
+  media: (
+    <div
+      style={{
+        background: `linear-gradient(135deg, hsl(${item.hue} 60% 35%), hsl(${item.hue + 40} 70% 12%))`,
+      }}
+    >
+      <Rings hue={item.hue} />
+    </div>
+  ),
+}))
+
+function ProjectListDemo() {
+  return (
+    <div className="bg-[#0b0b0d] px-6 py-[30vh] text-white">
+      <ProjectList items={demoProjects} className="mx-auto max-w-[920px]" />
+    </div>
+  )
+}
+
 export const demos: Record<string, ComponentType> = {
   'stacked-cards': StackedCardsDemo,
   'reveal-words': RevealWordsDemo,
@@ -218,4 +250,5 @@ export const demos: Record<string, ComponentType> = {
   'scroll-accordion': ScrollAccordionDemo,
   'logo-grid': LogoGridDemo,
   'testimonial-pile': TestimonialPileDemo,
+  'project-list': ProjectListDemo,
 }

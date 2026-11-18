@@ -126,4 +126,18 @@ export const items: CatalogueItem[] = [
       'Grille rangée d’office sur écran tactile et si l’appareil désactive les animations.',
     ],
   },
+  {
+    name: 'project-list',
+    title: 'Liste de projets',
+    description:
+      'Les réalisations en liste, titre, client, année et numéro. Les traits s’ouvrent depuis le centre, puis les textes montent. Au survol, les autres lignes s’effacent et le visuel du projet apparaît derrière.',
+    tags: ['Survol', 'Liste', 'Réalisations'],
+    origin: { label: 'podium.global, vue liste des projets', url: 'https://podium.global/' },
+    values: [
+      'Points des traits qui apparaissent en 140 ms, puis trait qui s’étire depuis le centre et points qui s’écartent vers les bords en 580 ms, power2.inOut, 60 ms plus tard.',
+      'Textes qui montent de 110 % à 0 en 460 ms, power3.out, à 580 ms.',
+      'Au survol, les autres lignes et leurs traits passent à 0,2 d’opacité en 480 ms, expo.out.',
+      'Visuel du projet en fondu en 580 ms et qui se pose de 1,015 à 1 en 1,05 s, expo.out.',
+    ],
+  },
 ]
