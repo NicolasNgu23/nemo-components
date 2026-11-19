@@ -193,6 +193,27 @@
           "target": "@lib/list-fade.ts"
         }
       ]
+    },
+    {
+      "name": "curved-carousel",
+      "type": "registry:component",
+      "title": "Carrousel courbé",
+      "description": "Un carrousel plein écran dont les visuels tournent sur un cylindre en perspective, avec titre, vignettes, flèches et glisser à la souris.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/components/curved-carousel.tsx",
+          "type": "registry:component",
+          "target": "@components/curved-carousel.tsx"
+        },
+        {
+          "path": "registry/lib/carousel-ring.ts",
+          "type": "registry:lib",
+          "target": "@lib/carousel-ring.ts"
+        }
+      ]
     }
   ]
 }

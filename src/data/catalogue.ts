@@ -140,4 +140,21 @@ export const items: CatalogueItem[] = [
       'Visuel du projet en fondu en 580 ms et qui se pose de 1,015 à 1 en 1,05 s, expo.out.',
     ],
   },
+  {
+    name: 'curved-carousel',
+    title: 'Carrousel courbé',
+    description:
+      'Un carrousel plein écran pour mettre des projets à la une. Les visuels tournent sur un cylindre vu de l’intérieur, la couleur de fond et le titre changent avec eux. Flèches, vignettes et glisser à la souris.',
+    tags: ['Carrousel', '3D', 'Glisser'],
+    origin: {
+      label: 'apechain.com, bloc « Hot games » (enregistrement d’écran)',
+      url: 'https://apechain.com/',
+    },
+    values: [
+      'Au clic, fond et titre changent tout de suite, les cartes tournent en 1,4 s, courbe expo.out (90 % du trajet en 0,45 s).',
+      'Cartes sur l’intérieur d’un cylindre, 40 degrés entre deux cartes, la carte active avancée devant ses voisines, l’ensemble penché de 3 degrés.',
+      'Un glisser au-delà d’une demi-carte ou un coup sec change de carte, jamais plus d’une à la fois.',
+      'Version CSS 3D sans dépendance, cartes plates là où l’original les bombe en WebGL.',
+    ],
+  },
 ]

@@ -3,6 +3,7 @@ import type { ComponentType } from 'react'
 import { RevealWords } from '@/components/reveal-words'
 import { RisingWordmark } from '@/components/rising-wordmark'
 import { ScrollAccordion } from '@/components/scroll-accordion'
+import { CurvedCarousel } from '@/components/curved-carousel'
 import { LogoGrid } from '@/components/logo-grid'
 import { ProjectList } from '@/components/project-list'
 import { ServiceList } from '@/components/service-list'
@@ -163,6 +164,29 @@ function ProjectListPreview() {
   )
 }
 
+function CurvedCarouselPreview() {
+  return (
+    <div className="h-full overflow-hidden">
+      <div className="w-[300%] origin-top-left [zoom:0.333]">
+        <CurvedCarousel
+          items={[140, 220, 25, 185, 280].map((hue, index) => ({
+            title: ['Olive Chicken', 'Nemo Job', 'Café Brume', 'Atelier Verre', 'Onde'][index]!,
+            description: 'Exemple',
+            tone: `hsl(${hue} 40% 32%)`,
+            visual: (
+              <div
+                style={{
+                  background: `linear-gradient(135deg, hsl(${hue} 55% 30%), hsl(${hue + 50} 70% 10%))`,
+                }}
+              />
+            ),
+          }))}
+        />
+      </div>
+    </div>
+  )
+}
+
 export const previews: Record<string, ComponentType> = {
   'stacked-cards': StackedCardsPreview,
   'reveal-words': RevealWordsPreview,
@@ -172,4 +196,5 @@ export const previews: Record<string, ComponentType> = {
   'logo-grid': LogoGridPreview,
   'testimonial-pile': TestimonialPilePreview,
   'project-list': ProjectListPreview,
+  'curved-carousel': CurvedCarouselPreview,
 }

@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react'
 
+import { CurvedCarousel } from '@/components/curved-carousel'
 import { LogoGrid } from '@/components/logo-grid'
 import { ProjectList } from '@/components/project-list'
 import { RevealWords } from '@/components/reveal-words'
@@ -242,6 +243,65 @@ function ProjectListDemo() {
   )
 }
 
+const demoFeatured = [
+  {
+    title: 'Olive Chicken',
+    tag: 'Restaurant',
+    description: 'Commande en ligne et réservations pour un restaurant de poulet frit coréen.',
+    hue: 140,
+    tone: '#3f6b2a',
+  },
+  {
+    title: 'Nemo Job',
+    tag: 'Application',
+    description: 'Une veille d’offres d’emploi qui adapte le CV à chaque annonce.',
+    hue: 220,
+    tone: '#2c5c9a',
+  },
+  {
+    title: 'Café Brume',
+    tag: 'Site vitrine',
+    description: 'Un site rapide qui donne envie de pousser la porte.',
+    hue: 25,
+    tone: '#8a4a22',
+  },
+  {
+    title: 'Atelier Verre',
+    tag: 'Boutique',
+    description: 'Une boutique en ligne pour des pièces soufflées à la main.',
+    hue: 185,
+    tone: '#1f6a6a',
+  },
+  {
+    title: 'Onde',
+    tag: 'Agent IA',
+    description: 'Un agent vocal qui prend les rendez-vous à toute heure.',
+    hue: 280,
+    tone: '#5a3a8a',
+  },
+].map((item) => ({
+  title: item.title,
+  tag: item.tag,
+  badge: 'À la une',
+  description: item.description,
+  href: '#',
+  cta: 'Voir le projet',
+  tone: item.tone,
+  visual: (
+    <div
+      style={{
+        background: `linear-gradient(135deg, hsl(${item.hue} 55% 30%), hsl(${item.hue + 50} 70% 10%))`,
+      }}
+    >
+      <Rings hue={item.hue} />
+    </div>
+  ),
+}))
+
+function CurvedCarouselDemo() {
+  return <CurvedCarousel items={demoFeatured} />
+}
+
 export const demos: Record<string, ComponentType> = {
   'stacked-cards': StackedCardsDemo,
   'reveal-words': RevealWordsDemo,
@@ -251,4 +311,5 @@ export const demos: Record<string, ComponentType> = {
   'logo-grid': LogoGridDemo,
   'testimonial-pile': TestimonialPileDemo,
   'project-list': ProjectListDemo,
+  'curved-carousel': CurvedCarouselDemo,
 }
